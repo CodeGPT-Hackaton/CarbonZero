@@ -1,15 +1,24 @@
 // ChatForm.js
 import React from 'react';
 
-const ChatForm = ( onSubmit, value, onChange ) => {
+const ChatForm = ( ) => {
 
-        (
-            <form onSubmit={onSubmit}>
+    const handleUserInput = (e) => {
+        setUserInput(e.target.value);
+    
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+      };
+      return (
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="Escribe tu mensaje..."
-                    value={value}
-                    onChange={onChange}
+                   
+                    onChange={handleUserInput}
                 />
 
                 <button type="submit">Enviar</button>
