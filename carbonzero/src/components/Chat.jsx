@@ -6,20 +6,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Chat = () => {
 
-
-  const handleUserInput = (e) => {
-    setUserInput(e.target.value);
-
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-  };
-
   // ... (existing code)
 
   return (
+    <ChatFrom  />
       {/* FORM */}
       <form onSubmit={handleSubmit}>
         <input
